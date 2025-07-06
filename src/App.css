@@ -1,0 +1,172 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f0f0f0;
+  margin: 0;
+  padding: 20px;
+}
+
+.game {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.game-title {
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+.status {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.game-board {
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.board-row {
+  display: flex;
+  justify-content: center;
+}
+
+.square {
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  border: 2px solid #333;
+  font-size: 2em;
+  font-weight: bold;
+  cursor: pointer;
+  color: #333;
+}
+
+.square:focus {
+  outline: none;
+  background-color: #f0f0f0;
+}
+
+.square:hover {
+  background-color: #e0e0e0;
+}
+
+.square {
+  color: #333;
+}
+
+.square.x {
+  color: #2196F3;
+}
+
+.square.o {
+  color: #f44336;
+}
+
+.game-info button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 12px 24px;
+  text-align: center;
+  font-size: 1em;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.game-info button:hover {
+  background-color: #45a049;
+}
+
+.board-row:not(:last-child) .square {
+  border-bottom: none;
+}
+
+.square:not(:last-child) {
+  border-right: none;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 768px) {
+  .game {
+    max-width: 350px;
+    padding: 15px;
+  }
+  
+  .game-title {
+    font-size: 1.8em;
+  }
+  
+  .square {
+    width: 70px;
+    height: 70px;
+    font-size: 1.8em;
+  }
+  
+  .status {
+    font-size: 1.1em;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  body {
+    padding: 10px;
+  }
+  
+  .game {
+    max-width: 300px;
+    padding: 10px;
+  }
+  
+  .game-title {
+    font-size: 1.5em;
+    margin-bottom: 15px;
+  }
+  
+  .square {
+    width: 60px;
+    height: 60px;
+    font-size: 1.5em;
+  }
+  
+  .status {
+    font-size: 1em;
+    margin-bottom: 15px;
+  }
+  
+  .game-info button {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .game {
+    max-width: 280px;
+    padding: 8px;
+  }
+  
+  .game-title {
+    font-size: 1.3em;
+  }
+  
+  .square {
+    width: 50px;
+    height: 50px;
+    font-size: 1.3em;
+  }
+  
+  .game-info button {
+    padding: 8px 16px;
+    font-size: 0.8em;
+  }
+}
